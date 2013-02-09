@@ -17,3 +17,4 @@ elseif (!defined('SMF'))
 
 add_integration_function('integrate_profile_areas', 'custsmf_add_menu');
 add_integration_function('integrate_pre_include', '$sourcedir/Subs-Customize.php');
+add_integration_function('integrate_load_permissions', 'custsmf_add_permissions');

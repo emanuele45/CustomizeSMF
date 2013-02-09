@@ -30,3 +30,15 @@ function custsmf_add_menu (&$profile_areas)
 		),
 	);
 }
+
+function custsmf_add_permissions (&$permissionGroups, &$permissionList, &$leftPermissionGroups, &$hiddenPermissions, &$relabelPermissions)
+{
+	loadLanguage('CustSMF');
+
+	$permissionList['membergroup']['profile_custsmf'] = array(true, 'profile', 'edit_profile', 'moderate_general');
+}
+
+function custsmf_modify ()
+{
+
+}

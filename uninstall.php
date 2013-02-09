@@ -15,5 +15,6 @@ if (file_exists(dirname(__FILE__) . '/SSI.php') && !defined('SMF'))
 elseif (!defined('SMF'))
 	exit('<b>Error:</b> Cannot install - please verify you put this in the same place as SMF\'s index.php.');
 
-remove_integration_hook('integrate_profile_areas', 'custsmf_add_menu');
-remove_integration_hook('integrate_pre_include', '$sourcedir/Subs-Customize.php');
+remove_integration_function('integrate_profile_areas', 'custsmf_add_menu');
+remove_integration_function('integrate_pre_include', '$sourcedir/Subs-Customize.php');
+remove_integration_function('integrate_load_permissions', 'custsmf_add_permissions');
