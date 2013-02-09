@@ -23,10 +23,12 @@
 	<install for="2.0 - 2.0.99">
 		<code>install.php</code>
 		<require-file name="Subs-Customize.php" destination="$sourcedir" />
+		<require-file name="CustSMF.english.php" destination="$languagedir" />
 	</install>
 
 	<uninstall for="2.0 - 2.0.99">
 		<code>uninstall.php</code>
 		<remove-file name="$sourcedir/Subs-Customize.php" />
+		<remove-file name="$languagedir/CustSMF.english.php" />
 	</uninstall>
 </package-info>

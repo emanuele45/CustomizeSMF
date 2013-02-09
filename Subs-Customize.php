@@ -15,5 +15,18 @@ if (!defined('SMF'))
 
 function custsmf_add_menu (&$profile_areas)
 {
-// qui metteremo un po' di codice
+	global $txt;
+
+	loadLanguage('CustSMF');
+
+	$profile_areas['edit_profile']['areas']['customize'] = array(
+		'label' => $txt['custsmf'],
+		'file' => 'Subs-Customize.php',
+		'function' => 'custsmf_modify',
+		'sc' => 'post',
+		'permission' => array(
+			'own' => array('profile_custsmf_any', 'profile_custsmf_own'),
+			'any' => array('profile_custsmf_any'),
+		),
+	);
 }
