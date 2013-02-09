@@ -24,11 +24,13 @@
 		<code>install.php</code>
 		<require-file name="Subs-Customize.php" destination="$sourcedir" />
 		<require-file name="CustSMF.english.php" destination="$languagedir" />
+		<require-file name="CustSMF.template.php" destination="$themedir" />
 	</install>
 
 	<uninstall for="2.0 - 2.0.99">
 		<code>uninstall.php</code>
 		<remove-file name="$sourcedir/Subs-Customize.php" />
 		<remove-file name="$languagedir/CustSMF.english.php" />
+		<remove-file name="$themedir/CustSMF.template.php" />
 	</uninstall>
 </package-info>

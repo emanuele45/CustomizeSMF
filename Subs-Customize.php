@@ -40,5 +40,5 @@ function custsmf_add_permissions (&$permissionGroups, &$permissionList, &$leftPe
 
 function custsmf_modify ()
 {
-
+	loadTemplate('CustSMF');
 }
