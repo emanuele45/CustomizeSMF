@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<license>
+<!--
+/**
+ * Customize SMF
+ *
+ * @package Customize SMF
+ * @author emanuele
+ * @copyright 2013 emanuele, Simple Machines
+ * @license http://www.simplemachines.org/about/smf/license.php BSD
+ *
+ * @version 0.0.1
+ */
+-->
+	</license>
+	<id>emanuele:customize_smf</id>
+	<name>Customize SMF</name>
+	<version>0.0.1</version>
+	<type>modification</type>
+
+	<install for="2.0 - 2.0.99">
+		<code>install.php</code>
+		<require-file name="Subs-Customize.php" destination="$sourcedir" />
+	</install>
+
+	<uninstall for="2.0 - 2.0.99">
+		<code>uninstall.php</code>
+		<remove-file name="$sourcedir/Subs-Customize.php" />
+	</uninstall>
+</package-info>
