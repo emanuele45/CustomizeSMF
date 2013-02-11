@@ -18,3 +18,25 @@ elseif (!defined('SMF'))
 add_integration_function('integrate_profile_areas', 'custsmf_add_menu');
 add_integration_function('integrate_pre_include', '$sourcedir/Subs-Customize.php');
 add_integration_function('integrate_load_permissions', 'custsmf_add_permissions');
+
+db_extend('packages');
+
+$smcFunc['db_add_column'](
+	'{db_prefix}members',
+	array(
+		'name' => 'cust_css',
+		'type' => 'text',
+		'default' => '',
+		'null' => false
+	)
+);
+
+$smcFunc['db_add_column'](
+	'{db_prefix}members',
+	array(
+		'name' => 'cust_js',
+		'type' => 'text',
+		'default' => '',
+		'null' => false
+	)
+);

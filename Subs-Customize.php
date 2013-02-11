@@ -38,7 +38,18 @@ function custsmf_add_permissions (&$permissionGroups, &$permissionList, &$leftPe
 	$permissionList['membergroup']['profile_custsmf'] = array(true, 'profile', 'edit_profile', 'moderate_general');
 }
 
-function custsmf_modify ()
+function custsmf_modify ($memID)
 {
+	global $context, $smcFunc;
+
+	if (isset($_REQUEST['update']))
+	{
+		checkSession('post');
+
+		$css = $smcFunc['htmlspecialchars']($_POST['custcss']);
+		$js = $smcFunc['htmlspecialchars']($_POST['custjs']);
+		updateMemberData($memID, array('cust_css' => $css, 'cust_js' => $js));
+	}
+
 	loadTemplate('CustSMF');
 }
